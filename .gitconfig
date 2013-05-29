@@ -1,21 +1,13 @@
 [user]
     name = Jacques Bachelier
-    email = jbachelier@toog.fr
-
-[github]
-    user = votre_nom_user_github
-    token = votre_token_github
-
-[core]
-    autocrlf = input    #
-    safecrlf = true     #
-    filemode = false
+    email = jacbachelier@gmail.com
 
 [alias]
     co = checkout
     ci = commit
     st = status
     br = branch
+    pom = push origin master
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
     type = cat-file -t
     dump = cat-file -p
