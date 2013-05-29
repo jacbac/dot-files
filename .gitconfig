@@ -1,0 +1,40 @@
+[user]
+    name = Jacques Bachelier
+    email = jbachelier@toog.fr
+
+[github]
+    user = votre_nom_user_github
+    token = votre_token_github
+
+[core]
+    autocrlf = input    #
+    safecrlf = true     #
+    filemode = false
+
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+
+[color]
+    ui = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow
+    frag = magenta
+    old = red
+    new = green
+
+[color "status"]
+    added = green
+    changed = red
+    untracked = cyan
