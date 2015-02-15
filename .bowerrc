@@ -1,0 +1,5 @@
+# For sf2 projects
+{
+  "analytics": false,
+  "directory": "vendor/bower"
+}
