@@ -206,5 +206,3 @@ start() { for arg in $*; do sudo /etc/init.d/$arg start; done }
 stop() { for arg in $*; do sudo /etc/init.d/$arg stop; done }
 restart() { for arg in $*; do sudo /etc/init.d/$arg restart; done }
 reload() { for arg in $*; do sudo /etc/init.d/$arg reload; done }
-
-

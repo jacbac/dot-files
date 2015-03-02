@@ -1,16 +1,14 @@
 # Symfony 2 folders & files
-web/bundles/
-web/uploads/
 app/bootstrap.php.cache
 app/cache/*
 app/config/parameters.yml
 app/logs/*
-!app/cache/.gitkeep
-!app/logs/.gitkeep
 app/phpunit.xml
+bin/
 build/
 vendor/
-bin/
+web/bundles/
+web/uploads/
 composer.phar
 
 # Gulp & Bower dependencies

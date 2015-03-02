@@ -23,8 +23,6 @@ alias hs='history | grep --color=auto'
 
 # -------------------- text-editor aliases ------------------------------------
 
-alias subtxt='sublime-text'
-alias sub-txt='sublime-text'
 alias svim="sudo vim"
 
 # -------------------- git aliases --------------------------------------------
