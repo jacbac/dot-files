@@ -1,0 +1,59 @@
+[
+	{"id": "side-bar-files-open-with",
+		"children":
+		[
+
+			//application 1
+			{
+				"caption": "Chrome",
+				"id": "side-bar-files-open-with-chrome",
+
+				"command": "side_bar_files_open_with",
+				"args": {
+									"paths": [],
+									"application": "/usr/bin/google-chrome",
+									"extensions":".*" //any file with extension
+								}
+			},
+
+			//application 2
+			{
+				"caption": "Libre Office",
+				"id": "side-bar-files-open-with-libreoffice",
+
+				"command": "side_bar_files_open_with",
+				"args": {
+									"paths": [],
+									"application": "/usr/bin/libreoffice",
+									"extensions":"csv|xls" //any file with these extensions
+								}
+			},
+			//application n 3
+			{
+				"caption": "Gimp",
+				"id": "side-bar-files-open-with-gimp",
+
+				"command": "side_bar_files_open_with",
+				"args": {
+									"paths": [],
+									"application": "/usr/bin/gimp",
+									"extensions":"psd|png|jpg|jpeg"  //any file with these extensions
+								}
+			},
+			//application n 4
+			{
+				"caption": "MySQL Workbench",
+				"id": "side-bar-files-open-with-mysql-workbench",
+
+				"command": "side_bar_files_open_with",
+				"args": {
+									"paths": [],
+									"application": "/usr/bin/mysql-workbench",
+									"extensions":"mwb"  //any file with these extensions
+								}
+			},
+
+			{"caption":"-"}
+		]
+	}
+]
