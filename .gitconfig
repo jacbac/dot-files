@@ -1,15 +1,20 @@
 [user]
     name = {your_name}
     email = {your_email}@gmail.com
+[core]
+    repositoryformatversion = 0
+    filemode = true
+    autocrlf = input
 [alias]
     co = checkout
-    ci = commit
+    cm = commit -m
     st = status
     br = branch
     pom = push origin master
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
     type = cat-file -t
     dump = cat-file -p
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [color]
     ui = auto
 [color "branch"]
