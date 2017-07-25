@@ -16,7 +16,8 @@
         "indent": ["error", 4, { "SwitchCase": 1 }],
         "max-len": ["error", 160],
         "no-param-reassign": ["error", { "props": false }],
-        "no-use-before-define": ["error", { "functions": false }]
+        "no-use-before-define": ["error", { "functions": false }],
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
     },
     "globals": {
         "jQuery": true,
