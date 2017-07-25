@@ -1,4 +1,51 @@
 {
+    "added_words":
+    [
+        "email",
+        "emails",
+        "checkbox",
+        "Android",
+        "framework",
+        "symfony",
+        "javascript",
+        "html",
+        "css",
+        "gulp",
+        "Ubuntu",
+        "responsive",
+        "git",
+        "cloud",
+        "bootstrap",
+        "tracking",
+        "uptime",
+        "downtime",
+        "metrics",
+        "beta",
+        "prod",
+        "templating",
+        "webdesign",
+        "versionning",
+        "Grunt",
+        "Ionic",
+        "newsletters",
+        "Wordpress",
+        "Twig",
+        "App",
+        "Github",
+        "Behance",
+        "Codepen",
+        "start",
+        "up",
+        "Photoshop",
+        "Illustrator",
+        "Indesign",
+        "picturefill",
+        "js",
+        "plateforme",
+        "Multizone",
+        "app",
+        "firmware"
+    ],
     "always_show_minimap_viewport": true,
     "args":
     {
@@ -25,22 +72,52 @@
         "*.jar",
         "*.zip"
     ],
+    "color_scheme": "Packages/User/SublimeLinter/Monokai Extended Origin (SL).tmTheme",
     "command": "toggle_setting",
     "default_encoding": "UTF-8",
     "default_line_ending": "unix",
     "detect_indentation": true,
+    "dictionary": "Packages/Language - French/French.dic",
     "draw_minimap_border": false,
     "enable_telemetry": "auto",
     "ensure_newline_at_eof_on_save": true,
     "fallback_encoding": "UTF-8",
     "fold_buttons": true,
+    "folder_exclude_patterns":
+    [
+        ".idea",
+        ".svn",
+        ".git",
+        ".hg",
+        "CVS",
+        "node_modules",
+        "var/cache",
+        "var/sessions"
+    ],
     "font_size": 10,
     "gutter": true,
     "highlight_modified_tabs": true,
     "hot_exit": true,
     "ignored_packages":
     [
+        "ActionScript",
+        "AppleScript",
+        "D",
+        "Erlang",
+        "Go",
+        "JavaScript Completions",
+        "Lisp",
+        "Matlab",
+        "Pascal",
         "Vintage"
+    ],
+    "ignored_words":
+    [
+        "france",
+        "frontend",
+        "jquery",
+        "js?v",
+        "nantes"
     ],
     "indent_subsequent_lines": true,
     "indent_to_bracket": false,
@@ -65,5 +142,5 @@
     "trim_automatic_white_space": true,
     "trim_trailing_white_space_on_save": true,
     "word_wrap": "auto",
-    "wrap_width": 300
+    "wrap_width": 240
 }

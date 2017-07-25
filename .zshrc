@@ -1,13 +1,21 @@
 # Path to your oh-my-zsh installation.
+export TERM="xterm-256color"
 export ZSH=/home/jacques/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 DEFAULT_USER="jacques"
+
+POWERLEVEL9K_MODE="awesome-fontconfig"
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status symfony2_version symfony2_tests)
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
+POWERLEVEL9K_STATUS_VERBOSE=false
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -47,12 +55,15 @@ HIST_STAMPS="yyyy/mm/dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git symfony2 dircycle common-aliases npm nyan)
+plugins=(zsh-nvm git symfony2 dircycle common-aliases npm nyan)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-# export MANPATH="/usr/local/man:$MANPATH"
+export ANDROID_HOME="/home/jacques/Programmes/AndroidSdk"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/jacques/.composer/vendor/bin"
+export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+export PATH="$PATH:`yarn global bin`"
+export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 

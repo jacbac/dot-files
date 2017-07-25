@@ -1,0 +1,13 @@
+{
+    "presets": ["env"],
+    "plugins": [
+        [
+            "transform-object-rest-spread",
+            "transform-es2015-computed-properties",
+            "transform-es2015-destructuring",
+            "babel-plugin-transform-builtin-extend", {
+                "globals": ["Error", "Array"]
+            }
+        ]
+    ]
+}

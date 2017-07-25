@@ -1,0 +1,29 @@
+{
+    "extends": "stylelint-config-sass-guidelines",
+    "plugins": [
+    ],
+    "rules": {
+        "indentation": 4,
+        "declaration-block-properties-order": [[
+            "position",
+            "display",
+            "margin",
+            "margin-top",
+            "margin-right",
+            "margin-bottom",
+            "margin-left",
+            "padding",
+            "padding-top",
+            "padding-right",
+            "padding-bottom",
+            "padding-left",
+            "background",
+            "background-color",
+            "font-size",
+            "font-weight",
+            "color"],
+            { "unspecified": "ignore" }
+        ],
+        "max-nesting-depth": 3
+    }
+}
