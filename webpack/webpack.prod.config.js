@@ -34,7 +34,7 @@ const pluginDefine = new webpack.DefinePlugin({
 // Adds a banner to the top of each generated chunk
 // https://webpack.js.org/plugins/banner-plugin/
 const pluginBanner = new webpack.BannerPlugin({
-    banner: 'Copyright (c) 2012-2017 Qivivo',
+    banner: 'Copyright (c) 2012-2017',
 });
 
 // Handle the base config's plugins array and add the plugins
