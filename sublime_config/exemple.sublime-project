@@ -1,0 +1,40 @@
+{
+    "folders":
+    [
+        {
+            "path": "/home/jacques/workspace/referencebatiment"
+        },
+        {
+            "path": "/home/jacques/workspace/ponroy_2018"
+        },
+        {
+            "path": "/home/jacques/workspace/bandofboats-platform"
+        },
+        {
+            "path": "/home/jacques/workspace/carrepointu"
+        },
+        {
+            "path": "/home/jacques/workspace/ima-discovery"
+        },
+        {
+            "path": "/home/jacques/workspace/allpneus"
+        },
+        {
+            "path": "/home/jacques/perso/qivivo_web"
+        },
+        {
+            "path": "/home/jacques/workspace/elasticsearch-query-builder"
+        },
+        {
+            "path": "/home/jacques/workspace/bnp-uber"
+        },
+        {
+            "path": "/home/jacques/workspace/extranet-autos"
+        }
+    ],
+    "settings":
+    {
+        "SublimeLinter.linters.php-cs-fixer.executable": "/home/jacques/workspace/referencebatiment/vendor/bin/php-cs-fixer",
+        "SublimeLinter.linters.phpstan.executable": "/home/jacques/workspace/referencebatiment/vendor/bin/phpstan"
+    }
+}

@@ -1,61 +1,79 @@
-# SF 3.x files
-/.web-server-pid
-/app/config/parameters.yml
-/build/
-/phpunit.xml
-/var/*
-!/var/cache
+# From https://github.com/github/gitignore
+
+# Email spool folder
+/app/spool/*
+
+# Cache, session files and logs (Symfony3-4)
 /var/cache/*
-!var/cache/.gitkeep
-!/var/logs
 /var/logs/*
-!var/logs/.gitkeep
-!/var/sessions
 /var/sessions/*
+/var/exchange/*
+!var/cache/.gitkeep
+!var/logs/.gitkeep
 !var/sessions/.gitkeep
-!var/SymfonyRequirements.php
+!var/exchange/.gitkeep
+
+# Parameters
+/app/config/parameters.yml
+/app/config/parameters.ini
+
+# Managed by Composer
+/app/bootstrap.php.cache
+/var/bootstrap.php.cache
+/bin/*
+!bin/console
+!bin/symfony_requirements
 /vendor/
+
+# Assets and user uploads
 /web/bundles/
+/web/uploads/
 
-/web/bundles/
-/web/upload
+# PHPUnit
+/app/phpunit.xml
+/phpunit.xml
 
-# Gulp & Bower dependencies
-node_modules
-bower_components
+# Build data
+/build/
 
-# Webpack files
-*.hot-update.js
-*.hot-update.json
+# Composer PHAR
+/composer.phar
 
-# Numerous always-ignore extensions
-*.diff
-*.err
+# Backup entities generated with doctrine:generate:entities command
+**/Entity/*~
+
+# Embedded web-server pid file
+/.web-server-pid
+
+# Logs
+logs
 *.log
-*.orig
-*.rej
-*.swo
-*.swp
-*.vi
-*.zip
-*~
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# OS or Editor folders
-.cache
+# Dependency directories
+node_modules/
+
+# dotenv environment variables file
+.env
+
+# Docker files
+/docker-compose.override.yml
+
+# Import and export dir/files
+/app/Resources/exchange/*
+/web/medias/*
+
+# Compiled assets
+/web/assets/*
+/web/compiled/*
+
+# PhpCsFixer config 
+.php_cs
+.php_cs.cache
+
+# IDE or MacOS files
 .DS_Store
-.project
-.tmproj
-*.esproj
-*.sublime-project
-*.sublime-workspace
-nbproject
-Thumbs.db
 .idea/
-/.idea/*
-/.settings
-/screenshots/*
-.buildpath
-us.stackdump
-mysql.exe
-casperjs/
-phantomjs/
+*.sublime-settings

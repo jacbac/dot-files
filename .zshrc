@@ -1,22 +1,63 @@
+# If you come from bash you might have to change your $PATH.
+export PATH="$PATH::/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="$PATH:`yarn global bin`"
+export PATH="$PATH:~/.composer/vendor/bin:~/bin"
+
+export MANPATH="/usr/local/man:$MANPATH"
+
 # Path to your oh-my-zsh installation.
-export TERM="xterm-256color"
 export ZSH=/home/jacques/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history symfony2_tests symfony2_version)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history symfony2_version)
 
 POWERLEVEL9K_MODE="awesome-fontconfig"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status symfony2_version symfony2_tests)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status symfony2_version)
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
 POWERLEVEL9K_STATUS_VERBOSE=false
+
+# Load external aliases
+source $HOME/.aliases
+
+# History
+export HISTSIZE=500000
+export HISTFILE="$HOME/.history"
+export SAVEHIST=$HISTSIZE
+
+# Remove superfluous blanks from each command line being added to the history
+# list
+setopt histreduceblanks
+
+# Do not enter command lines into the history list if they are duplicates of the
+# previous event.
+setopt histignorealldups
+
+# Automatically use menu completion after the second consecutive request for
+# completion
+setopt automenu
+
+# Try to make the completion list smaller (occupying less lines) by printing
+# the matches in columns with different widths
+setopt listpacked
+
+# Try to correct the spelling of commands
+setopt correct
+# https://github.com/robbyrussell/oh-my-zsh/issues/449
+# setopt nonomatch
+
+# Set list of themes to load
+# Setting this variable when ZSH_THEME=random
+# cause zsh load theme from this variable instead of
+# looking in ~/.oh-my-zsh/themes/
+# An empty array have no effect
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -60,17 +101,9 @@ POWERLEVEL9K_STATUS_VERBOSE=false
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-nvm git symfony2 dircycle common-aliases npm nyan)
+plugins=(zsh-nvm git symfony2 dircycle common-aliases npm)
 
-# User configuration
-
-export ANDROID_HOME="/home/jacques/Programmes/AndroidSdk"
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/jacques/.composer/vendor/bin"
-export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
-export PATH="$PATH:`yarn global bin`"
-export MANPATH="/usr/local/man:$MANPATH"
-
-# export MANPATH="/usr/local/man:$MANPATH"
+source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -86,7 +119,7 @@ export MANPATH="/usr/local/man:$MANPATH"
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -96,3 +129,27 @@ export MANPATH="/usr/local/man:$MANPATH"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+# Docker-compose completion
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
+
+# Le Phare docker trigramme access
+export DOCKER_HOST_SUFFIX="xxx.lph"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Functions
+
+# Source everything in ~/bashrc.d {{{
+if [ -d ~/.bashrc.d ]; then
+  for script in ~/.bashrc.d/*; do
+    test -f $script && source $script;
+  done;
+fi
+# }}}
+
+# define bash functions on a per-directory basis (https://github.com/hbekel/magic)
+precmd() { eval "$PROMPT_COMMAND" }
+PROMPT_COMMAND="source /usr/lib/magic/magic"
